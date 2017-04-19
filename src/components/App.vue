@@ -1,17 +1,18 @@
 <template>
   <div id="app">
     <div></div>
-    <img src="./assets/logo.png">
+    <img v-if="$route.path !== '/'" src="../assets/logo.png">
     <router-view></router-view>
   </div>
 </template>
 
 <script>
-import inter from './common/interface'
+// import inter from './common/interface'
 export default {
   name: 'app',
   mounted: function () {
-    console.log('aaaa' + inter.LoginUrl)
+    // inter.LoginUrl
+    console.log('aaaa')
   }
 }
 </script>
